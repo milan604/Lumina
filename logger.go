@@ -6,10 +6,6 @@ import (
 	"go.uber.org/zap"
 )
 
-var (
-	logger *zap.SugaredLogger
-)
-
 type ContextKey string
 
 const (
