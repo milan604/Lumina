@@ -27,7 +27,7 @@ go get github.com/milan604/lumina
 
 **Lumina** is developed and maintained by **[Milan Adhikari](https://github.com/milan604)**.
 
-- **GitHub**: [@ymilan604](https://github.com/milan604)
+- **GitHub**: [@milan604](https://github.com/milan604)
 - **Email**: meelantech@gmail.com
 
 ---
