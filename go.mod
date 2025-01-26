@@ -1,6 +1,6 @@
-module lumina
+module github.com/milan604/lumina
 
-go 1.23.4
+go 1.23
 
 require go.uber.org/zap v1.27.0
 
