@@ -19,15 +19,12 @@ func createLogger() (*luminaLogger, error) {
 	}
 
 	return &luminaLogger{
-		Log: zapLogger,
+		Log: zapLogger.Sugar(),
 	}, nil
 }
 
-func withContext(ctx context.Context, fields ...zap.Field) []zap.Field {
-	if ctx == nil {
-		return fields
-	}
-
+func withContext(ctx context.Context) []interface{} {
+	var fields []interface{}
 	// Extract values from context
 	if requestID, ok := ctx.Value(RequestIDKey).(string); ok {
 		fields = append(fields, zap.String(string(RequestIDKey), requestID))

@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	logger *zap.Logger
+	logger *zap.SugaredLogger
 )
 
 type ContextKey string
@@ -18,10 +18,10 @@ const (
 )
 
 type LuminaIface interface {
-	Debug(msg string, fields ...zap.Field)
-	Info(msg string, fields ...zap.Field)
-	Warn(msg string, fields ...zap.Field)
-	Error(msg string, fields ...zap.Field)
+	Debug(args ...interface{})
+	Info(args ...interface{})
+	Warn(args ...interface{})
+	Error(args ...interface{})
 
 	DebugF(format string, args ...interface{})
 	InfoF(format string, args ...interface{})
@@ -35,7 +35,7 @@ type LuminaIface interface {
 }
 
 type luminaLogger struct {
-	Log *zap.Logger
+	Log *zap.SugaredLogger
 }
 
 // NewLogger creates and returns a new Logger instance that implements the LuminaIface interface.

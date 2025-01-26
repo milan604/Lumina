@@ -3,7 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
-	"lumina"
+
+	"github.com/milan604/lumina"
 )
 
 func main() {
