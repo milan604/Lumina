@@ -32,6 +32,10 @@ type LuminaIface interface {
 	InfoFCtx(ctx context.Context, format string, args ...interface{})
 	WarnFCtx(ctx context.Context, format string, args ...interface{})
 	ErrorFCtx(ctx context.Context, format string, args ...interface{})
+
+	With(keyValues ...interface{}) LuminaIface
+
+	Sync() error
 }
 
 type luminaLogger struct {
